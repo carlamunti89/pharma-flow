@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* 1. Definimos cómo Tailwind debe buscar el modo oscuro */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 2. Configuramos los colores base del cuerpo */
+@layer base {
+  body {
+    background-color: var(--color-slate-50);
+    color: var(--color-slate-900);
+    transition-property: color, background-color;
+    transition-duration: 300ms;
+  }
+
+  .dark body {
+    background-color: var(--color-slate-950);
+    color: var(--color-slate-100);
+  }
+}
+
+/* 3. Forzamos a que las clases dark: de tus componentes funcionen */
+@layer utilities {
+  .dark {
+    color-scheme: dark;
+  }
+}

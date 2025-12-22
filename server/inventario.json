@@ -1,0 +1,56 @@
+[
+  {
+    "id": "d57f5b21-6eee-4da8-b56e-730789199338",
+    "nombre": "holaaaa",
+    "cn": "123455",
+    "lote": "hhjj",
+    "fechaCaducidad": "2025-12-26",
+    "stock": 1,
+    "precio": 5
+  },
+  {
+    "id": "1380ed4e-a1ef-47c4-972e-069fd15a1731",
+    "nombre": "Ibuprofeno 600mg",
+    "cn": "742315",
+    "lote": "L-102",
+    "fechaCaducidad": "2026-05-20",
+    "stock": 24,
+    "precio": 4.5
+  },
+  {
+    "id": "d457e450-7de6-4eb4-bf87-ec2c68736fcd",
+    "nombre": "Betadine 50ml",
+    "cn": "112233",
+    "lote": "T-001",
+    "fechaCaducidad": "2025-02-28",
+    "stock": 5,
+    "precio": 12.4
+  },
+  {
+    "id": "2435d97e-cff3-4ab5-a1d3-d233e8bd52a4",
+    "nombre": "Omeprazol 20mg",
+    "cn": "921334",
+    "lote": "J-303",
+    "fechaCaducidad": "2027-10-12",
+    "stock": 100,
+    "precio": 2.9
+  },
+  {
+    "id": "066a0c02-88d9-4a50-ac36-81d54c035674",
+    "nombre": "Amoxicilina 500mg",
+    "cn": "654123",
+    "lote": "B-990",
+    "fechaCaducidad": "2025-01-10",
+    "stock": 12,
+    "precio": 8.25
+  },
+  {
+    "id": "db6ccbac-4903-437a-ac72-085a58ab0475",
+    "nombre": "Paracetamol 1g",
+    "cn": "882147",
+    "lote": "K-505",
+    "fechaCaducidad": "2025-03-15",
+    "stock": 50,
+    "precio": 3.1
+  }
+]
