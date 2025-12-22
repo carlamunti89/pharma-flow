@@ -2,8 +2,8 @@ import axios from "axios";
 import type { Medicamento } from "../types/index";
 
 const api = axios.create({
-  // Si existe una variable de entorno la usa, si no, usa localhost (para cuando trabajes en casa)
-  baseURL: import.meta.env.VITE_BACKEND_URL || "http://localhost:3001/api",
+  // Borramos el "|| localhost" momentáneamente para forzar la conexión a Internet
+  baseURL: "https://pharma-flow-6v89.onrender.com/api",
 });
 
 export const apiService = {
