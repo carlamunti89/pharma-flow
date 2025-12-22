@@ -7,9 +7,6 @@ import fs from "fs";
 import path from "path";
 
 const app = express();
-
-// --- CORRECCIÓN 1: CORS ---
-// Al dejarlo vacío así, permites que cualquier origen (como tu Vercel) consulte la API.
 app.use(cors());
 app.use(express.json());
 
@@ -17,11 +14,7 @@ const DATA_PATH = path.join(process.cwd(), "inventario.json");
 
 const leerDelDisco = (): Medicamento[] => {
   try {
-    if (!fs.existsSync(DATA_PATH)) {
-      // Si el archivo no existe en el servidor, lo creamos vacío para evitar el crash.
-      fs.writeFileSync(DATA_PATH, JSON.stringify([]));
-      return [];
-    }
+    if (!fs.existsSync(DATA_PATH)) return [];
     const raw = fs.readFileSync(DATA_PATH, "utf8");
     return JSON.parse(raw);
   } catch (e) {
@@ -30,11 +23,7 @@ const leerDelDisco = (): Medicamento[] => {
 };
 
 const guardarEnDisco = (data: Medicamento[]) => {
-  try {
-    fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), "utf8");
-  } catch (e) {
-    console.error("Error guardando datos:", e);
-  }
+  fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), "utf8");
 };
 
 const MedSchema = z.object({
@@ -54,6 +43,8 @@ const MedSchema = z.object({
   }),
 });
 
+// --- RUTA QUE FALTABA: GET (Obtener todos los medicamentos) ---
+// Esto es lo que hacía que el test diera 404
 app.get("/api/medicamentos", (req: Request, res: Response) => {
   const inventario = leerDelDisco();
   res.status(200).json(inventario);
@@ -104,15 +95,13 @@ app.put("/api/medicamentos/:id", (req: Request, res: Response) => {
   }
 });
 
-// --- CORRECCIÓN 2: PUERTO DINÁMICO ---
-// Render inyecta un puerto automáticamente. Si dejas el 3001, el despliegue fallará.
-const PORT = process.env.PORT || 3001;
-
+const PORT = 3001;
 if (process.env.NODE_ENV !== "test") {
   app.listen(PORT, () => {
     console.log(`🚀 Server PharmaFlow en puerto ${PORT}`);
   });
 }
 
+// Exportación correcta para Jest
 export { app };
 export default app;
