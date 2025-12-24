@@ -81,9 +81,9 @@ Reliability is non-negotiable in pharmaceutical software. This project includes 
 
 ---
 
-## 👤 Author
+## Author
 
-- **LinkedIn:** [linkedin.com/in/carla-muntada-garcia](https:www.linkedin.com/in/carla-muntada-garcia)
-- **Portfolio:** [tu-web-o-demo.vercel.app](https://tu-web-o-demo.vercel.app)
+- **LinkedIn:** [Carla Muntada Garcia](https:www.linkedin.com/in/carla-muntada-garcia-a846443a1)
+- **Portfolio:** [Pharma Flow Web](https://pharma-flow-web.onrender.com)
 
 ---
