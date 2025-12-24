@@ -3,7 +3,7 @@ import type { Medicamento } from "../types/index";
 
 const api = axios.create({
   // SUSTITUYE ESTA URL por la de tu backend en Render
-  baseURL: "https://pharma-flow-web.onrender.com/api",
+  baseURL: "https://pharma-flow-4.onrender.com",
 });
 
 export const apiService = {
