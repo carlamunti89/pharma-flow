@@ -43,14 +43,5 @@
     "fechaCaducidad": "2025-02-28",
     "stock": 5,
     "precio": 12.4
-  },
-  {
-    "id": "83f43650-bfd3-476a-b885-710c2b89cefa",
-    "nombre": "holaaa",
-    "cn": "123456",
-    "lote": "sdsa",
-    "fechaCaducidad": "2025-12-23",
-    "stock": 1,
-    "precio": 5
   }
 ]
