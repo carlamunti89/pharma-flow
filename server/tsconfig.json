@@ -10,10 +10,8 @@
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": false,
     "sourceMap": true,
-    /* CAMBIO CLAVE: Cambiamos "jest" por "vitest/globals" */
     "types": ["node", "vitest/globals"]
   },
-  /* IMPORTANTE: Incluimos la carpeta de tests para que TS la valide */
   "include": ["src/**/*", "tests/**/*", "vitest.config.ts"],
   "exclude": ["node_modules"]
 }

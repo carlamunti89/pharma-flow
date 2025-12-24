@@ -36,6 +36,7 @@ This project follows a modular architecture based on **Separation of Concerns (S
 - **`/services`**: Abstraction layer for external services (Mock API and PDF Generation).
 - **`/components`**: Atomic and reusable UI components.
 - **`/hooks`**: Custom hooks for shared logic (e.g., `useDarkMode`).
+- **`/types`**: Centralized TypeScript interfaces for consistent data structures across the app.
 
 ## Quality Assurance (Testing)
 
@@ -48,27 +49,33 @@ Reliability is non-negotiable in pharmaceutical software. This project includes 
 
 ## Installation & Setup
 
+### Prerequisites
+
+- **Node.js**: Version **20.x** or higher (Currently developed on **v20.11.0**).
+- **NPM**: Version **11.x** (Current development version: **v11.6.1**)
+
 1. **Clone the repository:**
 
-   1. **Clone the repository:**
+```bash
+   git clone http://github.com/carlamunti89/pharmaflow.git
 
-   ```typescript
-   git clone https://github.com/carlamunti89/pharmaflow.git
+```
 
-   ```
+2. **Backend Setup (Server):**
 
-2. **Install dependencies:**
-
-   ```typescript
+```bash
+   cd server
    npm install
+   npm run dev
 
-   ```
+```
 
-3. **Launch development server:**
+3. **Frontend Setup (Client):**
 
-```typescript
-npm run dev
-
+```bash
+   cd frontend
+   npm install
+   npm run dev
 
 ```
 

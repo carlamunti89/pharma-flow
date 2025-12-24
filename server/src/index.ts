@@ -95,12 +95,8 @@ app.put("/api/medicamentos/:id", (req: Request, res: Response) => {
   }
 });
 
-const PORT = 3001;
-if (process.env.NODE_ENV !== "test") {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server PharmaFlow en puerto ${PORT}`);
-  });
-}
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`Server en puerto ${PORT}`));
 
 // Exportación correcta para Jest
 export { app };
