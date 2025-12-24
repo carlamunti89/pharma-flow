@@ -2,7 +2,8 @@ import axios from "axios";
 import type { Medicamento } from "../types/index";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3001/api",
+  // SUSTITUYE ESTA URL por la de tu backend en Render
+  baseURL: "https://pharma-flow-web.onrender.com/",
 });
 
 export const apiService = {
